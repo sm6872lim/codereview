@@ -30,15 +30,15 @@ TEST(PriorityQueueTest,Trivial){
 	test_target.pop();
 	test_target.pop();
 	
-	ASSERT_EQ(test_target.top(),3);
-	ASSERT_EQ(test_target.size(),3);
-	ASSERT_FALSE(test_target.empty());
+	ASSERT_EQ(test_target.top(),3); // The highest pushed value is 3
+	ASSERT_EQ(test_target.size(),3); // Poped 3 elements
+	ASSERT_FALSE(test_target.empty()); // it must not empty
 
 	test_target.pop();
 	test_target.pop();
 	test_target.pop();
 	
-	ASSERT_TRUE(test_target.empty());
+	ASSERT_TRUE(test_target.empty()); // it must empty
 	
 	//***** Fail Example - If you activate this code, Test will be fail *
 	//test_target.pop();
